@@ -1,0 +1,68 @@
+.button {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.icon-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  background-color: unset;
+  box-shadow: unset;
+  z-index: 1;
+}
+.today {
+  background-color: lightblue;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.popup {
+  &__content {
+    position: absolute;
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.red-line {
+  width: 100%;
+  border-bottom: 2px solid red;
+  position: absolute;
+}

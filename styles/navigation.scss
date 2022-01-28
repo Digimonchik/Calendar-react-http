@@ -1,0 +1,37 @@
+.navigation {
+  width: 100%;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__today-btn {
+    height: 36px;
+    border-radius: 20%;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    font-family: "Mulish", sans-serif;
+  }
+  &__nav-icon {
+    height: 36px;
+    border-radius: 20%;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    font-family: "Mulish", sans-serif;
+  }
+  &__displayed-month {
+    margin-left: 20px;
+    font-family: "Mulish", sans-serif;
+  }
+}
+.create-event-btn {
+  height: 36px;
+  border-radius: 20%;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  font-family: "Mulish", sans-serif;
+}

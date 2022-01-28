@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  padding-left: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.create-event-btn {
+  margin-top: 20px;
+  font-family: "Mulish", sans-serif;
+}
+.day-label {
+  flex-grow: 1;
+  min-width: 60px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.calendar {
+  &__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+  &__day {
+    flex-grow: 1;
+    position: relative;
+    flex-direction: column;
+  }
+  &__time-slot {
+    box-sizing: border-box;
+    min-width: 60px;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  &__week {
+    flex-grow: 1;
+    display: flex;
+  }
+  &__week-container {
+    display: flex;
+  }
+  &__day-label {
+    flex-basis: 100%;
+    width: auto;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Mulish", sans-serif;
+  }
+}
+.time-slot {
+  box-sizing: border-box;
+  height: 60px;
+  min-width: 40px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  font-size: 12px;
+  &:first-child {
+    margin-top: 10px;
+  }
+}

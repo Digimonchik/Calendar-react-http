@@ -1,0 +1,225 @@
+.button {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.icon-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__content {
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  background-color: unset;
+  box-shadow: unset;
+  z-index: 1;
+}
+
+.today {
+  background-color: lightblue;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.popup__content {
+  position: absolute;
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.red-line {
+  width: 100%;
+  border-bottom: 2px solid red;
+  position: absolute;
+}
+
+.navigation {
+  width: 100%;
+  padding: 20px 40px;
+}
+.navigation__today-btn {
+  height: 36px;
+  border-radius: 20%;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  font-family: "Mulish", sans-serif;
+}
+.navigation__nav-icon {
+  height: 36px;
+  border-radius: 20%;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  font-family: "Mulish", sans-serif;
+}
+.navigation__displayed-month {
+  margin-left: 20px;
+  font-family: "Mulish", sans-serif;
+}
+
+.create-event-btn {
+  height: 36px;
+  border-radius: 20%;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  font-family: "Mulish", sans-serif;
+}
+
+.header {
+  display: flex;
+  padding-left: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.create-event-btn {
+  margin-top: 20px;
+  font-family: "Mulish", sans-serif;
+}
+
+.day-label {
+  flex-grow: 1;
+  min-width: 60px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.calendar__header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+.calendar__day {
+  flex-grow: 1;
+  position: relative;
+  flex-direction: column;
+}
+.calendar__time-slot {
+  box-sizing: border-box;
+  min-width: 60px;
+  height: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.calendar__week {
+  flex-grow: 1;
+  display: flex;
+}
+.calendar__week-container {
+  display: flex;
+}
+.calendar__day-label {
+  flex-basis: 100%;
+  width: auto;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+
+.time-slot {
+  box-sizing: border-box;
+  height: 60px;
+  min-width: 40px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.time-slot:first-child {
+  margin-top: 10px;
+}
+@media screen and (max-width: 540px) {
+  .navigation {
+    padding-left: 2px;
+  }
+  .create-event-btn {
+    width: 40px;
+    border-radius: 30%;
+    padding: 0px;
+  }
+  .navigation__today-btn {
+    width: 40px;
+    border-radius: 30%;
+    padding: 0px;
+    font-size: 8px;
+  }
+  .navigation__nav-icon {
+    width: 30px;
+    padding: 0px;
+  }
+  .navigation__displayed-month {
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: "Mulish", sans-serif;
+  }
+}
+.event {
+  position: absolute;
+  background-color: lightblue;
+  border-radius: 10%;
+  font-size: 14px;
+  padding-right: 10%;
+  box-sizing: border-box;
+  padding-left: 10%;
+  overflow: hidden;
+  text-overflow: inherit;
+  width: 80%;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Mulish", sans-serif;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow: scroll;
+  height: 100%;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
