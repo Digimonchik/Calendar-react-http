@@ -1,26 +1,22 @@
 {
-  "name": "gromcode-calendar-js",
+  "name": "gromcode-calendar-http",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. clone the repo\r 2. install LTS [NodeJS](https://nodejs.org/en/)\r 3. run `npm install` to to use eslint in the project",
+  "main": "index.html",
   "scripts": {
-    "lint": "npm run lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrii142/gromcode-calendar-js.git"
+    "url": "git+https://github.com/Digimonchik/gromcode-calendar-http.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Digimonchik (Dmitry Logvinenko)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrii142/gromcode-calendar-js/issues"
+    "url": "https://github.com/Digimonchik/gromcode-calendar-http/issues"
   },
-  "homepage": "https://github.com/andrii142/gromcode-calendar-js#readme",
+  "homepage": "https://github.com/Digimonchik/gromcode-calendar-http#readme",
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-import": "^2.20.1"
+    "eslint": "^8.8.0"
   }
 }
