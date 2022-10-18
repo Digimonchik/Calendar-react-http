@@ -1,7 +1,9 @@
 .header {
   @include for-large {
+    margin-top: 40px;
     display: flex;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
   }
   @include for-extra-small {
     display: flex;
@@ -15,10 +17,10 @@
 
 .navigation {
   @include for-large {
-  width: 100%;
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-evenly;
   &__today-btn {
     height: 36px;
     border-radius: 20%;

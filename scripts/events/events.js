@@ -4,12 +4,13 @@ import { renderWeek } from "../calendar/calendar.js";
 import { deleteTask, getTasksList } from "../common/taskfetch.js";
 
 const weekElem = document.querySelector(".calendar__week");
-const deleteEventBtn = document.querySelector(".delete-event-btn");
+let delete_buttons = document.querySelectorAll('event__delete-btn')
+// const deleteEventBtn = document.querySelector(".delete-event-btn");
 
 function handleEventClick(event) {
   if (event.target.classList.contains("event")) {
     setItem("eventIdToDelete", event.target.id);
-    openPopup(event.x, event.y - 140);
+    // openPopup(event.x, event.y - 140);
   }
 }
 
@@ -34,6 +35,9 @@ const createEventElement = (event) => {
   const eventElem = document.createElement("div");
   const topHour = new Date(event.start).getHours() * 60;
   eventElem.classList.add("event");
+  const button = document.createElement('button');
+  console.log(button);
+  eventElem.appendChild(button);
   eventElem.style.top = `${topHour + new Date(event.start).getMinutes()}px`;
   eventElem.id = event.id;
   eventElem.textContent = ` ${event.title} ${startTime} - ${endTime}`;
@@ -54,14 +58,23 @@ export const renderEvents = async () => {
         [...element.childNodes].map((child) => {
           if (child.dataset.time == new Date(eventObj.start).getHours()) {
             child.append(createEventElement(eventObj));
+            const deleteBtn = document.createElement('button')
+            deleteBtn.classList.add('event__delete-btn');
+            deleteBtn.addEventListener('click', onDeleteEvent);
+            const events = document.querySelectorAll('.event');
+            [...events].map(child => child.append(deleteBtn))
+            delete_buttons = document.querySelectorAll('event__delete-btn')
+    
           }
         });
       }
     });
   });
+
 };
 
 const onDeleteEvent = async () => {
+  console.log('delete')
   const eventToDelete = getItem("eventIdToDelete");
   await deleteTask(eventToDelete);
   renderWeek();
@@ -69,6 +82,5 @@ const onDeleteEvent = async () => {
   closePopup();
 };
 
-deleteEventBtn.addEventListener("click", onDeleteEvent);
-
-weekElem.addEventListener("click", handleEventClick);
+// deleteEventBtn.addEventListener("click", onDeleteEvent);
+weekElem.addEventListener("mouseover", handleEventClick);

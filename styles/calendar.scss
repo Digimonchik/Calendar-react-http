@@ -6,6 +6,7 @@
     background-color: white;
     z-index: 1;
     display: flex;
+    
     padding-top: 20px;
     padding-left: 40px;
     padding-bottom: 20px;
@@ -31,9 +32,20 @@
   &__day-label {
     flex-basis: 100%;
     width: auto;
+    display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     font-family: "Mulish", sans-serif;
+    &__day-name {
+
+      text-align: center;
+    }
+    &__day-number {
+      width: 40px;
+      text-align: center;
+
+    }
   }
   }
   @include for-extra-small {
@@ -73,7 +85,6 @@
         text-align: center;
       }
       &__day-number {
-
         text-align: center;
       }
       width: 45px;

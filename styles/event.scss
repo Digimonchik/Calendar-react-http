@@ -1,6 +1,6 @@
-// стили отображаемого в календаре события
 
 .event {
+  @include for-large {
   position: absolute;
   background-color: lightblue;
   border-radius: 10%;
@@ -15,9 +15,70 @@
   font-family: "Mulish", sans-serif;
   padding-top: 10px;
   cursor: pointer;
-  // &:hover {
-  //   width: 200%;
-  //   background-color: lightblue;
-  //   z-index: 1;
-  // }
+  &__delete-btn {
+    width: 20px;
+    height: 20px;
+    display: none;
+
+  }
+  &:hover {
+    width: 200px;
+    z-index: 6;
+   }
+
+   &:hover .event__delete-btn {
+    background-image: url('https://cdn3.iconfinder.com/data/icons/unicons-vector-icons-pack/32/cross-512.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    border: none;
+    outline: none;
+   }
+
+  }
+  @include for-extra-small {
+    position: absolute;
+    background-color: lightblue;
+    border-radius: 10%;
+    font-size: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: inherit;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Mulish", sans-serif;
+    padding-top: 10px;
+    cursor: pointer;
+    &__delete-btn {
+      width: 20px;
+      height: 20px;
+      display: none;
+  
+    }
+    &:hover {
+      width: 100px;
+      text-overflow: inherit;
+      font-size: 12px;
+      padding: 30px 5px;
+      z-index: 6;
+      position: absolute;
+      left: 0;
+     }
+  
+     &:hover .event__delete-btn { 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: block;
+      border: none;
+      outline: none;
+     }
+  }
 }
