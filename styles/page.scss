@@ -1,0 +1,8 @@
+@import 'layout.scss';
+
+.page { 
+margin: 0px auto;
+    @include for-extra-small {
+        max-width: 400px ;
+    }
+}

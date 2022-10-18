@@ -1,21 +1,5 @@
-.header {
-  display: flex;
-  padding-left: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.create-event-btn {
-  margin-top: 20px;
-  font-family: "Mulish", sans-serif;
-}
-.day-label {
-  flex-grow: 1;
-  min-width: 60px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
 .calendar {
+  @include for-large {
   &__header {
     position: sticky;
     top: 0;
@@ -50,6 +34,53 @@
     justify-content: center;
     flex-direction: column;
     font-family: "Mulish", sans-serif;
+  }
+  }
+  @include for-extra-small {
+    &__header {
+      position: sticky;
+      width: 360px;
+      top: 0;
+      background-color: white;
+      z-index: 1;
+      display: flex;
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-bottom: 20px;
+    }
+    &__day {
+
+      width: 45px;
+      position: relative;
+      flex-direction: column;
+    }
+    &__time-slot {
+      box-sizing: border-box;
+      width: 46px;
+      height: 60px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    &__week {
+      flex-grow: 1;
+      display: flex;
+    }
+    &__week-container {
+      display: flex;
+    }
+    &__day-label {
+      &__day-name {
+
+        text-align: center;
+      }
+      &__day-number {
+
+        text-align: center;
+      }
+      width: 45px;
+      justify-content: center;
+      flex-direction: column;
+      font-family: "Mulish", sans-serif;
+    }
   }
 }
 .time-slot {

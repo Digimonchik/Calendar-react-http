@@ -11,15 +11,15 @@ export const renderHeader = () => {
   const headerContainer = document.querySelector(".calendar__header");
   headerContainer.innerHTML = generateWeekRange(getStartOfWeek(startOfWeek))
     .map((element) => {
-      return `<div class ="calendar__day-label day-label">
-        <div class="day-label__day-name">${
+      return `<div class ="calendar__day-label">
+        <div class="calendar__day-label__day-name">${
           dayOfWeek[new Date(element).getDay()]
         }</div>
-        <div class="day-label__day-number">${new Date(element).getDate()}</div>
+        <div class="calendar__day-label__day-number">${new Date(element).getDate()}</div>
         </div>`;
     })
     .join(" ");
-  const getDaysRange = document.querySelectorAll(".day-label__day-number");
+  const getDaysRange = document.querySelectorAll(".calendar__day-label__day-number");
   [...getDaysRange].map((element) => {
     if (
       new Date(getItem("displayedWeekStart")).getMonth() ==
