@@ -23,11 +23,11 @@
   }
   &:hover {
     width: 200px;
+    height: 200px;
     z-index: 6;
    }
 
    &:hover .event__delete-btn {
-    background-image: url('https://cdn3.iconfinder.com/data/icons/unicons-vector-icons-pack/32/cross-512.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -61,6 +61,7 @@
     }
     &:hover {
       width: 100px;
+      height: 200px;
       text-overflow: inherit;
       font-size: 12px;
       padding: 30px 5px;

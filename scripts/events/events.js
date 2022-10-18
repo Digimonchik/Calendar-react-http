@@ -83,4 +83,5 @@ const onDeleteEvent = async () => {
 };
 
 // deleteEventBtn.addEventListener("click", onDeleteEvent);
-weekElem.addEventListener("mouseover", handleEventClick);
+weekElem.addEventListener("click", handleEventClick);
+
